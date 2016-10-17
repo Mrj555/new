@@ -26,5 +26,12 @@ namespace News.Controllers
 
             return View();
         }
+
+        public ActionResult Meng()
+        {
+
+            return View();
+        }
+
     }
 }
