@@ -32,7 +32,11 @@ namespace News.Controllers
 
             return View();
         }
-        public ActionResult List()
+        /// <summary>
+        /// 新闻列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult List(int page =10)
         {
 
            
@@ -43,6 +47,32 @@ namespace News.Controllers
                 };
            
             ViewBag.Data = data;
+            ViewBag.page = page;
+
+            //ViewData["Data"]=data;
+            //ViewData.Model=data;
+            return View();
+        }
+
+
+       
+        /// <summary>
+        /// 添加新闻
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Add()
+        {
+
+            return View();
+        }
+        /// <summary>
+        /// 保存新闻内容
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Save(string title,string content)
+        {
+            ViewBag.Title = title;
+            ViewBag.Content = content;
             return View();
         }
 
